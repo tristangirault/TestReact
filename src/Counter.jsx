@@ -72,7 +72,7 @@ export default class Counter extends React.Component {
 	
 	render(){
 		const number = (
-			<div className = "number" key = {0}>
+			<div className = "number" key = {0} height = "400px">
 				{this.renderNumber()}
 			</div>
 		)
