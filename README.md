@@ -1,5 +1,5 @@
-## Test React.JS
+# Test React.JS
 
-# Use
+## Use
 
 Type "npm install" in your console to install all the required modules
