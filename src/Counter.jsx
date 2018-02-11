@@ -49,42 +49,22 @@ export default class Counter extends React.Component {
 		})
 	}
 	
-	renderNumber(){
-		<NumberDisplay
-			numberToDisplay={this.state.nb}
-			textColor={this.state.color}
-		/>
-	}
-	
-	renderButtons(){
-		<div>
-			<button onClick={ ( ) => this.increment() }>
-				+1
-			</button>
-			<button onClick={ () => this.reset() }>
-				Reset
-			</button>
-			<button onClick={ () => this.changeColor(this.state.nextColor)}>
-				Switch to {this.state.nextColor}
-			</button>
-		</div>
-	}
-	
 	render(){
-		const number = (
-			<div className = "number" key = {0} height = "400px">
-				{this.renderNumber()}
-			</div>
-		)
-		
-		const buttons = (
-		<div className = "buttons" key = {1}>
-				{this.renderButtons()}
-			</div>
-		)
 		return(
-			<div className = "panel">
-				{[number, buttons]}
+			<div>
+				<NumberDisplay
+					numberToDisplay={this.state.nb}
+					textColor={this.state.color}
+					/>
+				<button onClick={ ( ) => this.increment() }>
+					+1
+				</button>
+				<button onClick={ () => this.reset() }>
+					Reset
+				</button>
+				<button onClick={ () => this.changeColor(this.state.nextColor)}>
+					Switch to {this.state.nextColor}
+				</button>
 			</div>
 		)
 	}
