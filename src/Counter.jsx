@@ -1,6 +1,7 @@
 // src/Counter.jsx
 
 import React from 'react';
+import {buttonPanelStyle, buttonStyle} from './style.js'
 
 export default class Counter extends React.Component {
 	constructor() {
@@ -50,19 +51,6 @@ export default class Counter extends React.Component {
 	}
 	
 	render(){
-			const buttonPanelStyle = {
-				flex: 2,
-				flexDirection: 'row',
-				marginLeft: '30px',
-				marginTop: '60px',
-				justifyContent: 'space-between',
-			}
-			
-			const buttonStyle = {
-				flex:1,
-				marginLeft: '10px',
-				width: '100px',
-			}
 		return(
 			<div>
 				<NumberDisplay
