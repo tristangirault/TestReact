@@ -1,0 +1,11 @@
+https://courses.reacttraining.com/p/advanced-react-free
+
+https://egghead.io/courses/getting-started-with-redux
+
+https://egghead.io/courses/the-beginner-s-guide-to-reactjs
+
+https://egghead.io/courses/start-learning-react
+
+https://www.grafikart.fr/tutoriels/react/react-todolist-969
+
+https://www.grafikart.fr/formations/webpack/react-hot-reload

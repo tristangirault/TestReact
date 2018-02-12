@@ -51,13 +51,14 @@ export default class Counter extends React.Component {
 	}
 	
 	render(){
+		
 		return(
 			<div>
 				<NumberDisplay
 					numberToDisplay={this.state.nb}
 					textColor={this.state.color}
-					/>
-					<div className = "buttonPanel" style = {buttonPanelStyle}>
+				/>
+				<div className = "buttonPanel" style = {buttonPanelStyle}>
 					<button onClick={ ( ) => this.increment() } style = {buttonStyle}>
 						+1
 					</button>
