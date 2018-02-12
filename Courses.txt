@@ -9,3 +9,4 @@ https://egghead.io/courses/start-learning-react
 https://www.grafikart.fr/tutoriels/react/react-todolist-969
 
 https://www.grafikart.fr/formations/webpack/react-hot-reload
+https://survivejs.com/react/getting-started/styling-notes/
