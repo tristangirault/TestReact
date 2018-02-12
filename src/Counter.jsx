@@ -50,21 +50,36 @@ export default class Counter extends React.Component {
 	}
 	
 	render(){
+			const buttonPanelStyle = {
+				flex: 2,
+				flexDirection: 'row',
+				marginLeft: '30px',
+				marginTop: '60px',
+				justifyContent: 'space-between',
+			}
+			
+			const buttonStyle = {
+				flex:1,
+				marginLeft: '10px',
+				width: '100px',
+			}
 		return(
 			<div>
 				<NumberDisplay
 					numberToDisplay={this.state.nb}
 					textColor={this.state.color}
 					/>
-				<button onClick={ ( ) => this.increment() }>
-					+1
-				</button>
-				<button onClick={ () => this.reset() }>
-					Reset
-				</button>
-				<button onClick={ () => this.changeColor(this.state.nextColor)}>
-					Switch to {this.state.nextColor}
-				</button>
+					<div className = "buttonPanel" style = {buttonPanelStyle}>
+					<button onClick={ ( ) => this.increment() } style = {buttonStyle}>
+						+1
+					</button>
+					<button onClick={ () => this.reset() } style = {buttonStyle}>
+						Reset
+					</button>
+					<button onClick={ () => this.changeColor(this.state.nextColor)} style = {buttonStyle}>
+						Switch to {this.state.nextColor}
+					</button>
+				</div>
 			</div>
 		)
 	}
@@ -74,7 +89,9 @@ function NumberDisplay(props)
 {
 	const style = {
 		color : props.textColor,
-		fontSize: '60px'
+		fontSize: '60px',
+		marginTop: '120px',
+		marginLeft: '177px'
 	}
 	return (
 		<h1 style={style}>{ props.numberToDisplay }</h1>
