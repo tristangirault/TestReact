@@ -1,7 +1,7 @@
 // src/Counter.jsx
 
 import React from 'react';
-import {buttonPanelStyle, buttonStyle} from './style.js'
+import {screenStyle, buttonPanelStyle, buttonStyle} from './style.js'
 
 export default class Counter extends React.Component {
 	constructor() {
@@ -10,6 +10,7 @@ export default class Counter extends React.Component {
 			nb: 0,
 			color: "red",
 			nextColor: "blue",
+			backgroundColor: "blue",
 			shouldChangeColor: false,
 		}
 	}
@@ -43,20 +44,19 @@ export default class Counter extends React.Component {
 		})
 	}
 	
-	changeColor(textColor){
+	changeColor(textColor, newBackgroundColor){
 			this.setState({
 			nextColor: this.state.color,
-			color: textColor
+			color: textColor,
 		})
 	}
 	
 	render(){
-		
 		return(
-			<div>
+			<div style = {screenStyle}>
 				<NumberDisplay numberToDisplay={this.state.nb} textColor={this.state.color}/>
 				<div className = "buttonPanel" style = {buttonPanelStyle}>
-					<button onClick={ ( ) => this.increment() } style = {buttonStyle}>
+					<button onClick={ () => this.increment() } style = {buttonStyle}>
 						+1
 					</button>
 					<button onClick={ () => this.reset() } style = {buttonStyle}>
@@ -74,10 +74,11 @@ export default class Counter extends React.Component {
 function NumberDisplay(props)
 {
 	const style = {
+		display: 'flex',
 		color : props.textColor,
 		fontSize: '60px',
-		marginTop: '120px',
-		marginLeft: '177px'
+		marginLeft: '30px',
+		justifyContent: 'center'
 	}
 	return (
 		<h1 style={style}>{ props.numberToDisplay }</h1>

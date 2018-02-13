@@ -1,15 +1,19 @@
 import React from 'react';
 
+export const screenStyle = {
+	display: 'flex',
+	flexDirection: 'column',
+	justifyContent: 'center',
+}
+
 export const buttonPanelStyle = {
-	flex: 2,
+	display: 'flex',
 	flexDirection: 'row',
-	marginLeft: '30px',
 	marginTop: '60px',
-	justifyContent: 'space-between',
+	justifyContent: 'center',
 }
 
 export const buttonStyle = {
-	flex:1,
 	marginLeft: '10px',
 	width: '100px',
 }
